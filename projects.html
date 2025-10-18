@@ -1,91 +1,73 @@
-<!DOCTYPE HTML>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Projects — Víctor Fuentes Campos</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Data projects and dashboards for public policy." />
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav centered-nav">
+      <nav class="menu" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/publications.html">Publications</a>
+        <a aria-current="page" href="/projects.html">Projects</a>
+        <a href="/impact.html">Impact</a>
+        <a class="btn btn--ghost" href="assets/Victor-Fuentes-CV-EN.pdf" download>Download CV</a>
+      </nav>
+    </div>
+  </header>
+  
 
-<html>
-	<head>
-		<title>Projects - Víctor Fuentes Campos</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<main class="section">
+  <div class="container">
+    <h1>Data Projects & Visualizations</h1>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <h2>Dashboards</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="assets/thumb-inflation.jpg" alt="Inflation tracker preview" loading="lazy" />
+        <div class="card__body">
+          <h3>Inflation Tracker — Peru</h3>
+          <p>Historical series, core measures, and regional comparisons using INEI data.</p>
+          <ul class="meta"><li>Observable · D3</li><li>Last update: 2025-10</li></ul>
+          <a class="btn btn--sm" href="https://observablehq.com/" target="_blank" rel="noopener">Open</a>
+        </div>
+      </article>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Víctor Fuentes Campos</a>
-					</header>
+      <article class="card">
+        <img src="assets/thumb-gdp.jpg" alt="Regional GDP dashboard preview" loading="lazy" />
+        <div class="card__body">
+          <h3>Regional GDP — Peru</h3>
+          <p>Interactive exploration of regional GDP, growth rates, and sector composition.</p>
+          <ul class="meta"><li>Observable · D3</li><li>2024–2025</li></ul>
+          <a class="btn btn--sm" href="https://observablehq.com/" target="_blank" rel="noopener">Open</a>
+        </div>
+      </article>
+    </div>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="publications.html">Publications</a></li>
-							<li class="active"><a href="projects.html">Projects</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://twitter.com/vfuentesc" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.linkedin.com/in/vfuentesc/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/vfuentesc" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+    <h2>Infographics</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="assets/thumb-hdi.jpg" alt="HDI infographic preview" loading="lazy" />
+        <div class="card__body">
+          <h3>Human Development — Regional comparison</h3>
+          <p>Ranking and gaps across regions in a single social-media-optimized slide.</p>
+          <ul class="meta"><li>SVG · Illustrator</li><li>2024</li></ul>
+          <a class="btn btn--sm" href="#" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
 
-				<!-- Main -->
-					<div id="main">
-						
-						<ul>
-						<h3> Dashboards </h3>
-							<li>Aug 2024 - <a href="https://vfuentesc.observablehq.cloud/produccion-minera-peru/">Peru: Mining Production by Metal, 2002-2024</a> with Observable Framework</li>
-							<li>Jan 2024 - <a href="https://observablehq.com/@vfuentesc/crecimiento-regional-peru">Peru: GDP Growth by Region, 2017 Q1 - 2023 Q3</a> with Observable Notebook</li>
-							<li>Dec 2023 - <a href="https://observablehq.com/@vfuentesc/evolucion-inflacion-peru-regiones-25-anos">Peru: Inflation Evolution by Region, 1997-2024</a> with Observable Notebook</li>
-							<li>Nov 2023 - <a href="https://observablehq.com/@vfuentesc/indice-desarrollo-humano-idh-peru">Peru: Human Development Index by Distritcs, 2012-2019</a> with Observable Notebook</li>
-							<li>Jul 2023 - <a href="https://observablehq.com/@vfuentesc/acceso-servicios-basicos-peru">Peru: Access to Elementary Services by Distritcs, 2017</a> with Observable Notebook</li>
-							<li>Apr 2023 - <a href="https://observablehq.com/@vfuentesc/confianza-empresarial-peru">Peru: Business Confidence, 2002-2023</a> with Observable Notebook</li>
-						</ul>
-						
-						<ul>
-						<h3> Infographics </h3>
-							<li>Feb 2024 - <a href="https://observablehq.com/@vfuentesc/dengue-peru">Peru: Dengue Cases Evolution, 2017-2024</a> with Observable Notebook</li>
-							<li>Jan 2024 - <a href="https://observablehq.com/d/150c3d750ced8f9d">Peru: Demographic Dynamics, 1950-2050</a> with Observable Notebook</li>
-							<li>Jan 2024 - <a href="https://observablehq.com/@vfuentesc/turismo-peru">Tourism Panorama in Peru</a> with Observable Notebook</li>
-							<li>Dec 2023 - <a href="https://observablehq.com/@vfuentesc/crecimiento-pbi-peru">Peru: GDP Growth</a> with Observable Notebook. </li>
-							<li>Oct 2023 - <a href="https://observablehq.com/@vfuentesc/exito-agroexportacion-peru">Peru: Agricultural Exports Evolution, 2000-2022</a> with Observable Notebook. <strong>Dancing Chart</strong></li>
-							<li>Oct 2023 - <a href="https://observablehq.com/@vfuentesc/probabilidad-magnitud-fenomeno-nino-fen">Peru: ENSO Impact, 2023-2024</a> with Observable Notebook.</li>
-						</ul>
-					</div>
-
-
-								<!-- Footer -->
-								<footer id="footer">
-									<section class="split contact">
-										<section>
-											<h3>Social</h3>
-											<ul class="icons alt">
-												<li><a href="https://twitter.com/vfuentesc" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="https://www.linkedin.com/in/vfuentesc/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-												<li><a href="https://github.com/vfuentesc" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-											</ul>
-										</section>
-									</section>
-								</footer>
-			
-							<!-- Copyright -->
-								<div id="copyright">
-									<ul><li>&copy; 2024 Víctor Fuentes Campos</li></ul>
-								</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<footer class="site-footer">
+  <div class="container">
+    <small>© 2025 Víctor Fuentes Campos</small>
+  </div>
+</footer>
+</body>
 </html>
