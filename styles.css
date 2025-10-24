@@ -381,3 +381,38 @@ a:hover { opacity: 0.8; }
 .subnav.scrolled { background: rgba(12,15,20,0.9); backdrop-filter: blur(10px); }
 
 section[id] { scroll-margin-top: 90px; }
+
+/* iOS safe area para que no se coma el primer item (Home) */
+.site-header {
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+}
+
+/* Nav móvil: scroll horizontal suave + no cortar texto */
+@media (max-width: 480px){
+  .nav { justify-content: flex-start; }            /* evita recorte del primer item */
+  .menu {
+    gap: .75rem;
+    overflow-x: auto;                               /* se desplaza si no entra */
+    -webkit-overflow-scrolling: touch;
+    padding: 0 12px;
+  }
+  .menu::-webkit-scrollbar { display: none; }       /* oculta scrollbar en iOS */
+  .menu a, .btn--ghost {
+    white-space: nowrap;                            /* no partir palabras */
+    padding: 10px 12px;
+    font-size: .95rem;
+    flex: 0 0 auto;                                 /* que no se compriman */
+  }
+}
+
+/* Subnav sticky: mismo trato y sin cortes */
+@media (max-width: 480px){
+  .subnav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 12px; padding-right: 12px;
+  }
+  .subnav a { white-space: nowrap; }
+}
