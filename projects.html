@@ -4,70 +4,97 @@
   <meta charset="utf-8" />
   <title>Projects — Víctor Fuentes Campos</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Data projects and dashboards for public policy." />
+  <meta name="description" content="Data products and visual narratives for public policy." />
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- NAV -->
   <header class="site-header">
-    <div class="container nav centered-nav">
+    <div class="container nav">
       <nav class="menu" aria-label="Main">
         <a href="/">Home</a>
+        <a href="/impact.html">Impact</a>
         <a href="/publications.html">Publications</a>
         <a aria-current="page" href="/projects.html">Projects</a>
-        <a href="/impact.html">Impact</a>
         <a class="btn btn--ghost" href="assets/Victor-Fuentes-CV-EN.pdf" download>Download CV</a>
       </nav>
     </div>
   </header>
-  
 
-<main class="section">
-  <div class="container">
-    <h1>Data Projects & Visualizations</h1>
+  <main class="content">
+    <section class="intro">
+      <h1>Projects</h1>
+      <p>Data platforms, dashboards, and visual stories that turn complex datasets into clear public insight.</p>
+    </section>
 
-    <h2>Dashboards</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="assets/thumb-inflation.jpg" alt="Inflation tracker preview" loading="lazy" />
-        <div class="card__body">
-          <h3>Inflation Tracker — Peru</h3>
-          <p>Historical series, core measures, and regional comparisons using INEI data.</p>
-          <ul class="meta"><li>Observable · D3</li><li>Last update: 2025-10</li></ul>
-          <a class="btn btn--sm" href="https://observablehq.com/" target="_blank" rel="noopener">Open</a>
+    <!-- Peru en Cifras -->
+    <section class="section">
+      <div class="container">
+        <h2>Peru en Cifras</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="assets/peru-data.jpg" alt="Screenshot of the Peru en Cifras data platform" />
+            <h3>Peru en Cifras — Public Data Platform</h3>
+            <p>Interactive website visualizing economic, social, and political indicators across Peru.</p>
+            <p class="tags">Platform · Observable · D3</p>
+            <a class="card-link" href="https://peruencifras.org" target="_blank" rel="noopener">Open →</a>
+          </article>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="card">
-        <img src="assets/thumb-gdp.jpg" alt="Regional GDP dashboard preview" loading="lazy" />
-        <div class="card__body">
-          <h3>Regional GDP — Peru</h3>
-          <p>Interactive exploration of regional GDP, growth rates, and sector composition.</p>
-          <ul class="meta"><li>Observable · D3</li><li>2024–2025</li></ul>
-          <a class="btn btn--sm" href="https://observablehq.com/" target="_blank" rel="noopener">Open</a>
+    <!-- Dashboards -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Dashboards</h2>
+          <a class="see-all" href="/projects-all.html#dashboards">All dashboards →</a>
         </div>
-      </article>
+        <div class="cards">
+          <article class="card">
+            <img src="assets/thumb-inflation.jpg" alt="Inflation dashboard for Peru" loading="lazy" />
+            <h3>Inflation Tracker — Peru</h3>
+            <p>Historical series, core measures, and regional comparisons using INEI data.</p>
+            <p class="tags">Observable · D3</p>
+            <a class="card-link" href="https://observablehq.com/" target="_blank" rel="noopener">Open →</a>
+          </article>
+
+          <article class="card">
+            <img src="assets/thumb-gdp.jpg" alt="Regional GDP dashboard for Peru" loading="lazy" />
+            <h3>Regional GDP — Peru</h3>
+            <p>Interactive exploration of regional GDP, growth rates, and sector composition.</p>
+            <p class="tags">Observable · D3</p>
+            <a class="card-link" href="https://observablehq.com/" target="_blank" rel="noopener">Open →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Stories -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Visual Stories</h2>
+          <a class="see-all" href="/projects-all.html#visuals">All visuals →</a>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img src="assets/thumb-hdi.jpg" alt="HDI regional comparison infographic" loading="lazy" />
+            <h3>Human Development — Regional Comparison</h3>
+            <p>Ranking and gaps across regions in a single, social-media-ready slide.</p>
+            <p class="tags">SVG · Illustrator</p>
+            <a class="card-link" href="#" target="_blank" rel="noopener">View →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Víctor Fuentes Campos</small>
     </div>
-
-    <h2>Infographics</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="assets/thumb-hdi.jpg" alt="HDI infographic preview" loading="lazy" />
-        <div class="card__body">
-          <h3>Human Development — Regional comparison</h3>
-          <p>Ranking and gaps across regions in a single social-media-optimized slide.</p>
-          <ul class="meta"><li>SVG · Illustrator</li><li>2024</li></ul>
-          <a class="btn btn--sm" href="#" target="_blank" rel="noopener">View</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <small>© 2025 Víctor Fuentes Campos</small>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>

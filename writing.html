@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Writing — Víctor Fuentes Campos</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <nav class="menu" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/impact.html">Impact</a>
+      <a aria-current="page" href="/publications.html">Publications</a>
+      <a href="/projects.html">Projects</a>
+      <a class="btn btn--ghost" href="assets/Victor-Fuentes-CV-EN.pdf" download>Download CV</a>
+    </nav>
+  </div>
+</header>
+<nav class="subnav"><a href="#top">Research</a><a href="#opinion">Opinion</a></nav>
+
+<main class="content">
+  <section class="intro" id="top">
+    <h1>Writing</h1>
+    <p>Research & policy papers and opinion columns. Evidence for decision‑making and public understanding.</p>
+  </section>
+
+  <section id="top" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Research & Policy Papers</h2>
+        <a class="see-all" href="#opinion">Jump to Opinion →</a>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="assets/research-mining.jpg" alt="Chart illustrating mining supplier linkages in Peru" />
+          <h3>Economic Linkages of Mining Suppliers in Peru</h3>
+          <p><strong>With A. Pérez & M. Rojas · IPE · 2023</strong><br> Regional employment multipliers using input–output tables and firm-level data, quantifying spillovers from mining procurement.</p>
+          <p class="tags">Methods: IO tables · Microdata</p>
+          <a class="card-link" href="#" target="_blank" rel="noopener">PDF →</a>
+        </article>
+        <article class="card">
+          <img src="assets/research-decentralization.jpg" alt="Map illustrating decentralization and competitiveness" />
+          <h3>Decentralization and Local Competitiveness</h3>
+          <p><strong>2024 — Forthcoming</strong><br> Administrative fragmentation and implications for service delivery, fiscal capacity, and coordination failures.</p>
+          <a class="card-link" href="#" target="_blank" rel="noopener">Abstract →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="opinion" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Opinion Columns</h2>
+        <a class="see-all" href="#top">Back to top ↑</a>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="assets/column-distritomania.jpg" alt="Newspaper column about administrative fragmentation in Peru" />
+          <h3>Peru’s District Obsession</h3>
+          <p><strong>El Comercio · 2024-09-12</strong><br> Costs of excessive administrative fragmentation and lost economies of scale.</p>
+          <p class="tags">Opinion · Governance · Territorial Reform</p>
+          <a class="card-link" href="#" target="_blank" rel="noopener">Read →</a>
+        </article>
+        <article class="card">
+          <img src="assets/column-productivity.jpg" alt="Opinion column about productivity and regional development" />
+          <h3>Productivity and Regional Development</h3>
+          <p><strong>El Comercio · 2024-06-20</strong><br> Linking productivity gaps with decentralization challenges in Peru’s regions.</p>
+          <p class="tags">Opinion · Economics · Development</p>
+          <a class="card-link" href="#" target="_blank" rel="noopener">Read →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><small>© 2025 Víctor Fuentes Campos</small></div></footer>
+
+<script>
+(function(){
+  const subnav = document.querySelector('.subnav');
+  const links = document.querySelectorAll('.subnav a');
+  const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const activate = (id) => { links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id)); };
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if(e.isIntersecting) activate(e.target.id); });
+  }, { rootMargin: '-50% 0px -40% 0px', threshold: 0.01 });
+  sections.forEach(s => obs.observe(s));
+  const onScroll = () => subnav && subnav.classList.toggle('scrolled', window.scrollY > 100);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
