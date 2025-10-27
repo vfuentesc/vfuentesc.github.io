@@ -416,3 +416,46 @@ section[id] { scroll-margin-top: 90px; }
   }
   .subnav a { white-space: nowrap; }
 }
+
+/* Desktop: texto completo; móvil: corto */
+.cv--short { display: none; }
+@media (max-width: 480px){
+  .cv--full { display: none; }
+  .cv--short { display: inline; }
+}
+
+/* ===== Vertical layout for Library cards ===== */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ==== Layout differentiation for Library ==== */
+
+/* Default (Home, etc.) → keep horizontal */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Vertical stacking only in Library page */
+body.impact-page .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items:stretch; 
+}
+
+body.impact-page .card {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}

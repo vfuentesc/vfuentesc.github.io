@@ -2,173 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Impact — Víctor Fuentes Campos</title>
+  <title>Library — Víctor Fuentes Campos</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Teaching, talks, and workshops." />
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav centered-nav">
-      <nav class="menu" aria-label="Main">
-        <a href="/">Home</a>
-        <a aria-current="page" href="/impact.html">Impact</a>
-        <a href="/publications.html">Publications</a>
-        <a href="/projects.html">Projects</a>
-        <a class="btn btn--ghost" href="assets/Victor-Fuentes-CV-EN.pdf" download>Download CV</a>
-      </nav>
-    </div>
-  </header>
-  
+<body class="impact-page">
+<header class="site-header">
+  <div class="container nav">
+    <nav class="menu" aria-label="Main">
+      <a href="/">Home</a>
+      <a aria-current="page" href="/impact.html">Impact</a>
+      <a class="btn btn--ghost" href="assets/Victor-Fuentes-CV-EN.pdf" download>
+        <span class="cv--full">Download CV</span><span class="cv--short">CV</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<nav class="subnav">
+  <a href="#opinion">Opinion</a>
+  <a href="#media">Media</a>
+  <a href="#talks">Talks</a>
+  <a href="#research">Research</a>
+  <a href="#teaching">Teaching</a>
+</nav>
 
 <main class="content">
-    <section class="intro">
-      <h1>Public Voice</h1>
-      <p>
-        As a spokesperson for the <strong>Peruvian Institute of Economics (IPE)</strong>, 
-        I contribute to the national economic debate through interviews, columns, and data-driven communication. 
-        Each year, these efforts generate over <strong>$1.5 million in free-press value</strong>, 
-        strengthening public understanding of evidence-based policy.
-      </p>
-    </section>
-
-    <!-- MEDIA STATS -->
-    <section class="highlights">
-      <div class="stats">
-        <div class="stat">
-          <h2>+300</h2>
-          <p>Media Appearances</p>
-        </div>
-        <div class="stat">
-          <h2>$1.5M+</h2>
-          <p>Free-Press Value</p>
-        </div>
-        <div class="stat">
-          <h2>10+</h2>
-          <p>Years Communicating Evidence</p>
-        </div>
+  <!-- PUBLIC VOICE -->
+  <section class="section">
+    <div class="container">
+      <h2>Public Voice</h2>
+      <div class="cards">
+        <article id="opinion" class="card">
+          <h3 >Opinion Columns</h3>
+          <ul>
+            <li><a href="https://elcomercio.pe/economia/opinion/distritomania-peruana-por-victor-fuentes-ipe-universidades-opinion-noticia/" target="_blank" rel="noopener">Peruvian Districtmania</a> — El Comercio, September 2025</li>
+            <li><a href="https://elcomercio.pe/economia/opinion/la-presidenta-mas-suertuda-del-siglo-por-victor-fuentes-ipe-dina-boluarte-28-de-julio-fiestas-patrias-noticia/" target="_blank" rel="noopener">The Luckiest President of the Century</a> — El Comercio, July 2024</li>
+            <li><a href="https://elcomercio.pe/economia/opinion/la-fiesta-fiscal-por-victor-fuentes-ipe-ocde-noticia/" target="_blank" rel="noopener">The Fiscal Feast</a> — El Comercio, May 2024</li>
+            <li><a href="https://elcomercio.pe/economia/opinion/el-privilegio-de-ser-peruano-por-victor-fuentes-ipe-peru-economia-peruana-noticia/" target="_blank" rel="noopener">The Privilege of Being Peruvian</a> — El Comercio, April 2024</li>
+            <li><a href="https://elcomercio.pe/economia/opinion/del-imperio-romano-al-gota-a-gota-por-victor-fuentes-ipe-gota-a-gota-delincuencia-inseguridad-ciudadana-noticia/" target="_blank" rel="noopener">From the Roman Empire to the ‘Drop-by-Drop’ Loans</a> — El Comercio, March 2024</li>
+          </ul>
+          <a class="highlight-link" href="#" target="_blank" rel="noopener">See all columns →</a>
+        </article>
+        <article id="media" class="card">
+          <h3 >Interviews & Media</h3>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener">RPP Noticias: Economic outlook 2025</a> — Watch</li>
+            <li><a href="#" target="_blank" rel="noopener">Canal N: Informality challenges</a> — Watch</li>
+            <li><a href="#" target="_blank" rel="noopener">TV Perú: Inflation and growth</a> — Watch</li>
+          </ul>
+          <a class="highlight-link" href="#" target="_blank" rel="noopener">See all interviews →</a>
+        </article>
+        <article id="talks" class="card">
+          <h3 >Talks & Conferences</h3>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener">Perumin TIS Forum: Mining & Development</a> — 2025</li>
+            <li><a href="#" target="_blank" rel="noopener">AI for Public Policy (Arequipa)</a> — 2024</li>
+          </ul>
+          <a class="highlight-link" href="#" target="_blank" rel="noopener">See all talks →</a>
+        </article>
       </div>
-    </section>
-
-<!-- ===== Interviews ===== -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Interviews</h2>
-      <a class="see-all" href="/public-voice.html#interviews">All interviews →</a>
     </div>
+  </section>
 
-    <div class="list-grid">
-      <!-- Card 1 -->
-      <article class="list-item">
-        <div class="list-item__head">
-          <h3>Decentralization and Productivity</h3>
-          <span class="tag">TV</span>
-        </div>
-        <p class="muted">RPP · <time datetime="2024-10-03">Oct 3, 2024</time></p>
-        <p class="abstract">Key drivers behind local fragmentation and service delivery.</p>
-        <div class="links">
-          <a class="link" href="https://..." target="_blank" rel="noopener">Watch</a>
-        </div>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="list-item">
-        <div class="list-item__head">
-          <h3>Competitiveness and Growth</h3>
-          <span class="tag">Radio</span>
-        </div>
-        <p class="muted">Radio Program · <time datetime="2024-08-18">Aug 18, 2024</time></p>
-        <p class="abstract">What drives regional productivity gaps across Peru.</p>
-        <div class="links">
-          <a class="link" href="https://..." target="_blank" rel="noopener">Listen</a>
-        </div>
-      </article>
+  <!-- RESEARCH & TEACHING -->
+  <section class="section">
+    <div class="container">
+      <h2>Research & Teaching</h2>
+      <div class="cards">
+        <article id="research" class="card">
+          <h3>Research & Policy Papers</h3>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener">Economic Linkages of Mining Suppliers in Peru</a> — IPE, 2023</li>
+            <li><a href="#" target="_blank" rel="noopener">Decentralization and Local Competitiveness</a> — Forthcoming, 2024</li>
+          </ul>
+          <a class="highlight-link" href="#" target="_blank" rel="noopener">See all research →</a>
+        </article>
+        <article id="teaching" class="card">
+          <h3>Teaching</h3>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener">Public Policy Analysis (UP)</a> — Adjunct Professor, 2020–present</li>
+            <li><a href="#" target="_blank" rel="noopener">Regional Competitiveness Seminar (PUCP)</a> — 2024</li>
+          </ul>
+          <a class="highlight-link" href="#" target="_blank" rel="noopener">See all courses →</a>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== Talks & Conferences ===== -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Talks & Conferences</h2>
-      <a class="see-all" href="/public-voice.html#talks">All talks →</a>
-    </div>
+</main>
 
-    <div class="list-grid">
-      <article class="list-item">
-        <div class="list-item__head">
-          <h3>Mining Competitiveness Forum</h3>
-          <span class="tag">Keynote</span>
-        </div>
-        <p class="muted"><time datetime="2024-11-21">Nov 21, 2024</time> · Lima</p>
-        <p class="abstract">Evidence-based policy for productivity and regional growth.</p>
-        <div class="links">
-          <a class="link" href="https://..." target="_blank" rel="noopener">Slides / Recap</a>
-        </div>
-      </article>
+<footer class="site-footer"><div class="container"><small>© 2025 Víctor Fuentes Campos</small></div></footer>
 
-      <article class="list-item">
-        <div class="list-item__head">
-          <h3>AI for Public Policy</h3>
-          <span class="tag">Panel</span>
-        </div>
-        <p class="muted"><time datetime="2024-06-06">Jun 6, 2024</time> · Arequipa</p>
-        <p class="abstract">Applied AI to improve accountability and service delivery.</p>
-        <div class="links">
-          <a class="link" href="https://..." target="_blank" rel="noopener">Program</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Teaching ===== -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Teaching</h2>
-      <a class="see-all" href="/public-voice.html#teaching">All courses →</a>
-    </div>
-
-    <div class="list-grid">
-      <article class="list-item">
-        <div class="list-item__head">
-          <h3>Public Policy Analysis (UP)</h3>
-          <span class="tag">Course</span>
-        </div>
-        <p class="muted">Adjunct Professor · 2020–present</p>
-        <p class="abstract">Applied policy evaluation, regional economics, and visualization.</p>
-        <div class="links">
-          <a class="link" href="https://..." target="_blank" rel="noopener">Syllabus</a>
-        </div>
-      </article>
-
-      <article class="list-item">
-        <div class="list-item__head">
-          <h3>Regional Competitiveness Seminar</h3>
-          <span class="tag">Guest Lecture</span>
-        </div>
-        <p class="muted">PUCP · 2024</p>
-        <p class="abstract">Productivity, decentralization, and data-driven accountability.</p>
-        <div class="links">
-          <a class="link" href="https://..." target="_blank" rel="noopener">Slides</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-  </main>
-
-  <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container">
-    <small>© 2025 Víctor Fuentes Campos</small>
-  </div>
-</footer>
+<script>
+(function(){
+  const subnav = document.querySelector('.subnav');
+  const links = document.querySelectorAll('.subnav a');
+  const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const activate = (id) => { links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id)); };
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if(e.isIntersecting) activate(e.target.id); });
+  }, { rootMargin: '-50% 0px -40% 0px', threshold: 0.01 });
+  sections.forEach(s => obs.observe(s));
+  const onScroll = () => subnav && subnav.classList.toggle('scrolled', window.scrollY > 100);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
 </body>
 </html>
