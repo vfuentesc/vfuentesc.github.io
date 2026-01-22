@@ -424,21 +424,6 @@ section[id] { scroll-margin-top: 90px; }
   .cv--short { display: inline; }
 }
 
-/* ===== Vertical layout for Library cards ===== */
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.card {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ==== Layout differentiation for Library ==== */
-
 /* Default (Home, etc.) → keep horizontal */
 .cards {
   display: grid;
@@ -446,16 +431,16 @@ section[id] { scroll-margin-top: 90px; }
   gap: 1.5rem;
 }
 
-/* Vertical stacking only in Library page */
+/* Vertical stacking only in Library/Impact page */
 body.impact-page .cards {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  align-items:stretch; 
+  align-items: stretch;
 }
 
 body.impact-page .card {
   width: 100%;
-  max-width: none;
+  max-width: 700px;
   margin: 0 auto;
 }
