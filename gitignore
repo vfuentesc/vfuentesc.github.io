@@ -1,0 +1,34 @@
+# === SYSTEM FILES ===
+.DS_Store
+Thumbs.db
+
+# === EDITORS ===
+.vscode/
+.idea/
+*.code-workspace
+
+# === BUILD / TEMP FILES ===
+node_modules/
+dist/
+build/
+.cache/
+*.log
+*.tmp
+
+# === PERSONAL / ARCHIVE FILES ===
+*.zip
+*.bak
+*.old
+*.DS_Store
+*.swp
+*~
+
+# === MACOS & NETWORK ===
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
