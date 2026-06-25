@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Víctor Fuentes Campos — Economist · Data Journalist · AI Builder</title>
+  <title>Víctor Fuentes Campos — Economista · Periodismo de datos · IA</title>
   <meta content="width=device-width,initial-scale=1" name="viewport" />
-  <meta content="Economist, data journalist, and AI builder. Columnist at El Comercio. Creator of Peru en Cifras. Public Policy Manager at IPE." name="description" />
+  <meta content="Economista, periodista de datos y constructor de IA. Columnista en El Comercio. Creador de Perú en Cifras. Gerente de Políticas Públicas en el IPE." name="description" />
   <link href="assets/favicon.webp" rel="icon" type="image/webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
   <link href="styles.css" rel="stylesheet" />
-  <meta content="Víctor Fuentes Campos — Economist · Data Journalist · AI Builder" property="og:title" />
-  <meta content="I study Peru's economy, explain it in public, and build the AI tools to understand it better." property="og:description" />
+  <meta content="Víctor Fuentes Campos — Economista · Periodismo de datos · IA" property="og:title" />
+  <meta content="Entender el Perú con datos. Y explicarlo para que importe." property="og:description" />
   <meta content="website" property="og:type" />
-  <meta content="en_US" property="og:locale" />
+  <meta content="es_PE" property="og:locale" />
   <meta content="summary_large_image" name="twitter:card" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Víctor Fuentes Campos",
-    "jobTitle": "Economist · Data Journalist · AI Builder",
+    "jobTitle": "Economista · Periodismo de datos · IA",
     "url": "https://vfuentesc.github.io/",
     "sameAs": [
       "https://github.com/vfuentesc",
@@ -35,15 +35,20 @@
 <!-- NAV -->
 <header class="site-header">
   <div class="container nav">
-    <a class="nav__logo" href="/" aria-label="Home">VF</a>
-    <nav class="menu" aria-label="Main">
-      <a href="/" aria-current="page">Home</a>
-      <a href="/impact.html">Work</a>
-      <a class="btn--ghost" download href="assets/Victor-Fuentes-CV-EN.pdf">
-        <span class="cv--full">Download CV</span>
-        <span class="cv--short">CV</span>
-      </a>
+    <a class="nav__logo" href="/" aria-label="Inicio">VF</a>
+    <nav class="menu" aria-label="Menú principal">
+      <a href="/impact.html">Ideas</a>
+      <a href="https://peruencifras.pe" target="_blank" rel="noopener">Datos</a>
+      <a href="/impact.html#media">Medios</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="/prensa.html">Sala de prensa</a>
     </nav>
+    <div class="nav__actions">
+      <a class="btn--ghost nav__newsletter" href="#newsletter">El dato de la semana</a>
+      <a class="btn--ghost" download href="assets/Victor-Fuentes-CV-EN.pdf">
+        <span class="cv--full">CV</span>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -54,27 +59,95 @@
     <div class="container hero__grid">
       <div class="hero__copy">
         <div class="hero__badges">
-          <span class="badge badge--voice">Public Voice</span>
-          <span class="badge badge--data">Data Journalism</span>
-          <span class="badge badge--ai">AI Builder</span>
+          <span class="badge badge--voice">Voz pública</span>
+          <span class="badge badge--data">Periodismo de datos</span>
+          <span class="badge badge--ai">IA aplicada</span>
         </div>
-        <h1>Víctor Fuentes Campos</h1>
-        <p class="hero__tagline">Economist. Data journalist. AI builder.</p>
+        <h1>Entender el Perú<br>con datos. Y explicarlo<br>para que importe.</h1>
+        <p class="hero__tagline">Traduzco cifras económicas, políticas y sociales en argumentos que mueven la conversación pública.</p>
         <p class="hero__bio">
-          I study Peru's economy, explain it in public, and build the AI tools to understand it better.
-          Public Policy Manager at the <a href="https://www.ipe.org.pe" target="_blank" rel="noopener">IPE</a>,
-          columnist at <a href="https://elcomercio.pe" target="_blank" rel="noopener">El Comercio</a>,
-          and creator of <a href="https://peruencifras.pe" target="_blank" rel="noopener">Peru en Cifras</a>.
+          Gerente de Políticas Públicas en el <a href="https://www.ipe.org.pe" target="_blank" rel="noopener">IPE</a>,
+          columnista en <a href="https://elcomercio.pe" target="_blank" rel="noopener">El Comercio</a>
+          y creador de <a href="https://peruencifras.pe" target="_blank" rel="noopener">Perú en Cifras</a>.
         </p>
         <div class="cta">
-          <a class="btn btn--primary" href="mailto:vfuentes@uchicago.edu">Get in touch</a>
-          <a class="btn btn--outline" href="https://x.com/vfuentesc" target="_blank" rel="noopener">Follow on X</a>
+          <a class="btn btn--primary" href="#newsletter">Recibe el dato de la semana</a>
+          <a class="btn btn--outline" href="https://x.com/vfuentesc" target="_blank" rel="noopener">Sígueme en X</a>
           <a class="btn btn--outline" href="https://www.linkedin.com/in/vfuentesc/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <figure class="hero__photo" aria-label="Portrait of Víctor Fuentes Campos">
-        <img src="assets/portrait.png" alt="Portrait of Víctor Fuentes Campos" loading="eager" />
+      <figure class="hero__photo" aria-label="Retrato de Víctor Fuentes Campos">
+        <img src="assets/portrait.png" alt="Retrato de Víctor Fuentes Campos" loading="eager" />
       </figure>
+    </div>
+
+    <!-- 3 CHARTS FROM PERÚ EN CIFRAS -->
+    <div class="container">
+      <div class="charts-row">
+        <div class="charts-row__kicker">
+          Datos de <a href="https://peruencifras.pe" target="_blank" rel="noopener">Perú en Cifras</a>
+        </div>
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-card__label">Déficit fiscal del Gobierno Central</div>
+            <div class="chart-card__sub">% del PBI · 2019–2025</div>
+            <div class="chart-card__embed">
+              <!-- Reemplazar con: <iframe src="https://peruencifras.pe/embed/deficit-fiscal" ...></iframe> -->
+              <svg class="chart-svg" viewBox="0 0 280 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polyline points="14,20 54,28 94,18 134,50 174,44 214,65 264,62" stroke="#c8392b" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                <line x1="14" y1="90" x2="266" y2="90" stroke="#e8e4de" stroke-width="1"/>
+                <text x="14" y="98" font-size="9" fill="#7a7065" font-family="Inter,sans-serif">2019</text>
+                <text x="234" y="98" font-size="9" fill="#7a7065" font-family="Inter,sans-serif">2025</text>
+              </svg>
+            </div>
+            <a class="chart-card__link" href="https://peruencifras.pe" target="_blank" rel="noopener">Ver en Perú en Cifras ↗</a>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card__label">Denuncias por extorsión</div>
+            <div class="chart-card__sub">Miles de casos · 2018–2024</div>
+            <div class="chart-card__embed">
+              <!-- Reemplazar con: <iframe src="https://peruencifras.pe/embed/extorsion" ...></iframe> -->
+              <svg class="chart-svg" viewBox="0 0 280 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polyline points="14,78 54,68 94,56 134,42 174,30 214,20 264,12" stroke="#2c5282" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                <line x1="14" y1="90" x2="266" y2="90" stroke="#e8e4de" stroke-width="1"/>
+                <text x="14" y="98" font-size="9" fill="#7a7065" font-family="Inter,sans-serif">2018</text>
+                <text x="234" y="98" font-size="9" fill="#7a7065" font-family="Inter,sans-serif">2024</text>
+              </svg>
+            </div>
+            <a class="chart-card__link" href="https://peruencifras.pe" target="_blank" rel="noopener">Ver en Perú en Cifras ↗</a>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card__label">Pobreza monetaria nacional</div>
+            <div class="chart-card__sub">% de la población · 2019–2025</div>
+            <div class="chart-card__embed">
+              <!-- Reemplazar con: <iframe src="https://peruencifras.pe/embed/pobreza" ...></iframe> -->
+              <svg class="chart-svg" viewBox="0 0 280 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polyline points="14,30 54,72 94,78 134,65 174,62 214,56 264,54" stroke="#5b21b6" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                <line x1="14" y1="90" x2="266" y2="90" stroke="#e8e4de" stroke-width="1"/>
+                <text x="14" y="98" font-size="9" fill="#7a7065" font-family="Inter,sans-serif">2019</text>
+                <text x="234" y="98" font-size="9" fill="#7a7065" font-family="Inter,sans-serif">2025</text>
+              </svg>
+            </div>
+            <a class="chart-card__link" href="https://peruencifras.pe" target="_blank" rel="noopener">Ver en Perú en Cifras ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter__copy">
+          <h2>El dato de la semana</h2>
+          <p>Un número relevante de la economía peruana, con contexto y argumento. Sin ruido.</p>
+        </div>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="tu@email.com" required aria-label="Correo electrónico" />
+          <button type="submit" class="btn btn--primary">Suscribirme</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -82,7 +155,7 @@
   <div class="media-bar">
     <div class="container">
       <div class="media-bar__inner">
-        <span class="media-bar__label">As seen in</span>
+        <span class="media-bar__label">Visto en</span>
         <a class="media-outlet" href="https://elcomercio.pe/autor/victorfuentescampos/" target="_blank" rel="noopener">El Comercio</a>
         <a class="media-outlet" href="https://rpp.pe/economia/economia/de-promesa-a-produccion-el-largo-viaje-de-un-proyecto-minero-en-el-peru-informe-noticia-1650515" target="_blank" rel="noopener">RPP</a>
         <a class="media-outlet" href="https://larepublica.pe/economia/2025/07/24/nueva-ley-del-turismo-bajo-la-lupa-los-incentivos-fiscales-no-levantan-el-sector-segun-el-ipe-hnews-1114965" target="_blank" rel="noopener">La República</a>
@@ -97,28 +170,28 @@
   <!-- THREE PILLARS -->
   <div class="pillars">
     <div class="pillar pillar--voice">
-      <div class="pillar__icon">Public Voice</div>
-      <div class="pillar__title">Columnist &amp; Media Expert</div>
-      <p class="pillar__desc">Regular contributor to El Comercio and frequent guest on RPP, Canal N, Latina TV and La República. Over 300 media appearances per year on economics, policy, and public data.</p>
+      <div class="pillar__icon">Voz pública</div>
+      <div class="pillar__title">Columnista y analista en medios</div>
+      <p class="pillar__desc">Columnista habitual en El Comercio e invitado frecuente en RPP, Canal N, Latina TV y La República. Más de 300 apariciones en medios por año sobre economía, política y datos públicos.</p>
     </div>
     <div class="pillar pillar--data">
-      <div class="pillar__icon">Data Journalism</div>
-      <div class="pillar__title">Peru en Cifras</div>
-      <p class="pillar__desc">Creator of Peru en Cifras — a public data platform visualizing Peru's economic, social, and political indicators. Making data accessible and argumentative, not just decorative.</p>
+      <div class="pillar__icon">Periodismo de datos</div>
+      <div class="pillar__title">Perú en Cifras</div>
+      <p class="pillar__desc">Creador de Perú en Cifras — plataforma pública de datos que visualiza los indicadores económicos, sociales y políticos del Perú. Datos accesibles y argumentativos, no solo decorativos.</p>
     </div>
     <div class="pillar pillar--ai">
-      <div class="pillar__icon">AI Builder</div>
-      <div class="pillar__title">Building at the frontier</div>
-      <p class="pillar__desc">Actively building with Claude, Codex, and Antigravity: research automation, customs data pipelines, public policy dashboards. 8 projects running in parallel.</p>
+      <div class="pillar__icon">IA aplicada</div>
+      <div class="pillar__title">Construyendo en la frontera</div>
+      <p class="pillar__desc">Aplicando inteligencia artificial al análisis económico y las políticas públicas: automatización de investigación, pipelines de datos de comercio exterior y modelos de impacto de política.</p>
     </div>
   </div>
 
-  <!-- LATEST WRITING -->
+  <!-- IDEAS / COLUMNAS -->
   <section class="writing-section">
     <div class="container">
       <div class="section-header">
-        <h2>Latest Columns</h2>
-        <a class="see-all" href="/impact.html#opinion">All columns →</a>
+        <h2>Últimas ideas</h2>
+        <a class="see-all" href="/impact.html#opinion">Todas las columnas →</a>
       </div>
       <div class="columns-grid">
         <article class="column-card">
@@ -126,9 +199,9 @@
             <span class="column-card__outlet">El Comercio</span>
             <span class="column-card__date">Jun 2026</span>
           </div>
-          <h3><a href="https://elcomercio.pe/economia/opinion/el-petro-peru-de-la-salud-por-victor-fuentes-opinion-ipe-noticia/" target="_blank" rel="noopener">EsSalud: Peru's Petroperú of Healthcare</a></h3>
+          <h3><a href="https://elcomercio.pe/economia/opinion/el-petro-peru-de-la-salud-por-victor-fuentes-opinion-ipe-noticia/" target="_blank" rel="noopener">EsSalud: el Petroperú de la salud</a></h3>
           <div class="column-card__insight">
-            <span>13 executive presidents since 2021. Resources up 23% — consultations up just 9%. The same incentive failures that broke Petroperú are destroying public health.</span>
+            <span>13 presidentes ejecutivos desde 2021. Recursos subieron 23%, consultas solo 9%. Los mismos fallos que hundieron Petroperú están destruyendo la salud pública.</span>
           </div>
         </article>
         <article class="column-card">
@@ -136,21 +209,83 @@
             <span class="column-card__outlet">El Comercio</span>
             <span class="column-card__date">May 2026</span>
           </div>
-          <h3><a href="https://elcomercio.pe/economia/opinion/el-rescate-que-no-se-llama-rescate-por-victor-fuentes-campos-opinion-ipe-noticia/" target="_blank" rel="noopener">The Bailout That Isn't Called a Bailout</a></h3>
+          <h3><a href="https://elcomercio.pe/economia/opinion/el-rescate-que-no-se-llama-rescate-por-victor-fuentes-campos-opinion-ipe-noticia/" target="_blank" rel="noopener">El rescate que no se llama rescate</a></h3>
           <div class="column-card__insight">
-            <span>Over S/32 billion committed to Petroperú. 14 board presidents in five years — four months average tenure. When the state keeps changing the name, not the problem.</span>
+            <span>Más de S/32 mil millones comprometidos con Petroperú. 14 presidentes de directorio en cinco años. Cuando el Estado sigue cambiando el nombre, no el problema.</span>
           </div>
         </article>
         <article class="column-card">
           <div class="column-card__meta">
             <span class="column-card__outlet">El Comercio</span>
-            <span class="column-card__date">Apr 2026</span>
+            <span class="column-card__date">Abr 2026</span>
           </div>
-          <h3><a href="https://elcomercio.pe/economia/opinion/la-mineria-que-el-congreso-quiere-asfixiar-noticia/" target="_blank" rel="noopener">The Mining Sector Congress Wants to Strangle</a></h3>
+          <h3><a href="https://elcomercio.pe/economia/opinion/la-mineria-que-el-congreso-quiere-asfixiar-noticia/" target="_blank" rel="noopener">La minería que el Congreso quiere asfixiar</a></h3>
           <div class="column-card__insight">
-            <span>A mine takes 40 years to develop in Peru. Congress wants to cut concession terms from 30 to 15 years. Less formal mining doesn't mean less mining — it means more illegal mining.</span>
+            <span>Una mina tarda 40 años en desarrollarse en el Perú. El Congreso quiere reducir concesiones de 30 a 15 años. Menos minería formal no significa menos minería — significa más minería ilegal.</span>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SALA DE PRENSA TEASER -->
+  <section class="prensa-section">
+    <div class="container">
+      <div class="prensa-inner">
+        <div class="prensa__copy">
+          <p class="prensa__kicker">Para periodistas y organizadores</p>
+          <h2>Sala de prensa</h2>
+          <p>Bio en dos extensiones, foto de prensa en alta resolución, lista de temas y contacto directo para medios y eventos.</p>
+          <div class="prensa__topics">
+            <span class="prensa__topic">Política fiscal</span>
+            <span class="prensa__topic">Empresas del Estado</span>
+            <span class="prensa__topic">Minería y energía</span>
+            <span class="prensa__topic">Seguridad ciudadana</span>
+            <span class="prensa__topic">IA y economía</span>
+            <span class="prensa__topic">Informalidad laboral</span>
+          </div>
+          <div class="prensa__cta">
+            <a class="btn btn--primary" href="mailto:vfuentes@uchicago.edu">Invítame a hablar</a>
+            <a class="btn btn--outline" href="assets/Victor-Fuentes-CV-EN.pdf" download>Descargar CV</a>
+          </div>
+        </div>
+        <div class="prensa__kit">
+          <div class="prensa__download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <div class="prensa__download__info">
+              <div class="prensa__download__title">Bio corta</div>
+              <div class="prensa__download__sub">Dos versiones · Para presentaciones</div>
+            </div>
+            <a class="btn btn--outline btn--sm" href="mailto:vfuentes@uchicago.edu?subject=Bio%20solicitud">Solicitar</a>
+          </div>
+          <div class="prensa__download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <div class="prensa__download__info">
+              <div class="prensa__download__title">Foto de prensa</div>
+              <div class="prensa__download__sub">Alta resolución · Uso editorial</div>
+            </div>
+            <a class="btn btn--outline btn--sm" href="assets/portrait.png" download>Descargar</a>
+          </div>
+          <div class="prensa__download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <div class="prensa__download__info">
+              <div class="prensa__download__title">Banco de gráficos</div>
+              <div class="prensa__download__sub">Citables · Con fuente</div>
+            </div>
+            <a class="btn btn--outline btn--sm" href="https://peruencifras.pe" target="_blank" rel="noopener">Ver →</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -160,176 +295,157 @@
     <div class="container">
       <div class="feature-grid">
         <div class="feature__copy">
-          <p class="feature__kicker">Flagship Project</p>
-          <h2>Peru en Cifras</h2>
+          <p class="feature__kicker">Proyecto insignia</p>
+          <h2>Perú en Cifras</h2>
           <p>
-            An interactive data platform that breaks down Peru's most complex economic, social,
-            and political trends into clear, shareable visuals — built for a broad audience,
-            not just specialists. Data journalism designed to travel on social media and reach
-            people who don't read policy briefs.
+            Plataforma interactiva que descompone las tendencias económicas, sociales y políticas del Perú en visualizaciones claras y compartibles — pensada para audiencias amplias, no solo especialistas. Periodismo de datos diseñado para viajar en redes sociales y llegar a quienes no leen informes de política.
           </p>
           <div class="feature__stats">
             <div>
               <div class="feature__stat__n">2025</div>
-              <div class="feature__stat__l">Launched</div>
+              <div class="feature__stat__l">Lanzamiento</div>
             </div>
             <div>
-              <div class="feature__stat__n">Live</div>
-              <div class="feature__stat__l">Updated regularly</div>
+              <div class="feature__stat__n">Activo</div>
+              <div class="feature__stat__l">Actualización continua</div>
             </div>
           </div>
-          <a class="btn btn--outline" href="https://peruencifras.pe" target="_blank" rel="noopener">Open Peru en Cifras ↗</a>
+          <a class="btn btn--outline feature__btn" href="https://peruencifras.pe" target="_blank" rel="noopener">Abrir Perú en Cifras ↗</a>
         </div>
         <div class="feature__img">
-          <img src="assets/thumb-dashboard.png" alt="Peru en Cifras platform screenshot" loading="lazy" />
+          <img src="assets/thumb-dashboard.png" alt="Captura de pantalla de la plataforma Perú en Cifras" loading="lazy" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CURRENTLY BUILDING (AI) -->
-  <section class="building-section">
+  <!-- LAB IA — 1 CASO REAL -->
+  <section class="lab-section">
     <div class="container">
-      <div class="building-inner">
-        <div class="building__kicker">Currently building</div>
-        <h2 class="building__title">Applying AI to economics &amp; public policy</h2>
-        <p class="building__sub">Not just writing about AI — building with it. Eight active projects at the intersection of economic analysis, public data, and applied machine learning.</p>
-        <div class="building__projects">
-          <div class="building__project">
-            <div class="building__project__label">Research</div>
-            <div class="building__project__name">Automated research pipelines for IPE's policy analysis</div>
-          </div>
-          <div class="building__project">
-            <div class="building__project__label">Data Engineering</div>
-            <div class="building__project__name">Customs &amp; trade data analysis at scale</div>
-          </div>
-          <div class="building__project">
-            <div class="building__project__label">Public Products</div>
-            <div class="building__project__name">AI-powered impact dashboards for public policy</div>
-          </div>
-          <div class="building__project">
-            <div class="building__project__label">+ 5 more</div>
-            <div class="building__project__name">Across economic modeling, NLP for policy texts, and data visualization</div>
-          </div>
+      <div class="lab-inner">
+        <div class="lab__kicker">
+          <span class="lab__dot" aria-hidden="true"></span>
+          Lab · IA aplicada a políticas públicas
         </div>
-        <div class="building__tools">
-          <span class="tool-chip">Claude</span>
-          <span class="tool-chip">Codex</span>
-          <span class="tool-chip">Antigravity</span>
-          <span class="tool-chip">Python</span>
-          <span class="tool-chip">Observable</span>
+        <h2 class="lab__title">No escribo sobre IA. La uso para producir mejor análisis económico.</h2>
+        <p class="lab__sub">Un proyecto activo, con resultado medible.</p>
+        <div class="ai-case">
+          <div class="ai-case__header">
+            <span class="ai-case__tag">En producción · IPE</span>
+            <span class="ai-case__result">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+              Tiempo de análisis: de 3 días a 4 horas
+            </span>
+          </div>
+          <h3 class="ai-case__name">Pipeline de análisis de comercio exterior</h3>
+          <p class="ai-case__desc">Extracción y procesamiento automatizado de 10 años de registros aduaneros de SUNAT para modelar el impacto de shocks externos — precios de commodities, aranceles, tipo de cambio — en los principales sectores exportadores del Perú. El pipeline corre en producción y alimenta los reportes mensuales del IPE.</p>
+          <div class="ai-case__method">
+            <span>Python</span>
+            <span>Series de tiempo</span>
+            <span>Automatización de reportes</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS -->
-  <div class="stats-section">
-    <div class="stats">
-      <div class="stat">
-        <div class="stat__number">$1.5M+</div>
-        <div class="stat__label">Free-Press Value / yr</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">300+</div>
-        <div class="stat__label">Media Appearances / yr</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">12+</div>
-        <div class="stat__label">Years of Public Voice</div>
-      </div>
-      <div class="stat stat--ai">
-        <div class="stat__number">8</div>
-        <div class="stat__label">Active AI Projects</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- EXPERTISE -->
+  <!-- TERRITORIOS DE EXPERTISE -->
   <section class="expertise-section">
     <div class="container">
       <div class="section-header">
-        <h2>Areas of Expertise</h2>
-        <a class="see-all" href="/impact.html">Full work record →</a>
+        <h2>Territorios</h2>
+        <a class="see-all" href="/impact.html">Trabajo completo →</a>
       </div>
-      <div class="topics">
-        <span class="topic">Informal Economy</span>
-        <span class="topic">Mining &amp; Natural Resources</span>
-        <span class="topic">Crime &amp; Economic Security</span>
-        <span class="topic">AI &amp; Public Policy</span>
-        <span class="topic">Data Visualization</span>
-        <span class="topic">Fiscal Policy</span>
-        <span class="topic">Education Economics</span>
-        <span class="topic">Digital Economy</span>
-        <span class="topic">Regional Competitiveness</span>
-        <span class="topic">Energy Markets</span>
+      <div class="territories-grid">
+        <div class="territory">
+          <div class="territory__num">01</div>
+          <div class="territory__name">Fiscal y populismo</div>
+          <p class="territory__desc">Déficit fiscal, gasto público, presión tributaria y el ciclo electoral del populismo económico en el Perú.</p>
+        </div>
+        <div class="territory">
+          <div class="territory__num">02</div>
+          <div class="territory__name">Empresas del Estado</div>
+          <p class="territory__desc">Petroperú, EsSalud, Fonafe. Las instituciones que el Estado gestiona mal y el costo económico y social de esa ineficiencia.</p>
+        </div>
+        <div class="territory">
+          <div class="territory__num">03</div>
+          <div class="territory__name">Minería y energía</div>
+          <p class="territory__desc">Régimen de concesiones, conflictividad social, transición energética y el rol de los recursos naturales en el desarrollo del Perú.</p>
+        </div>
+        <div class="territory">
+          <div class="territory__num">04</div>
+          <div class="territory__name">IA y productividad</div>
+          <p class="territory__desc">Aplicaciones de inteligencia artificial en el análisis económico, la gestión pública y la productividad laboral en economías emergentes.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT / TIMELINE -->
-  <section class="about-section">
+  <section class="about-section" id="sobre">
     <div class="container">
       <div class="about__grid">
         <div class="about__bio">
-          <p class="about__kicker">About</p>
-          <h2>Trained in policy.<br/>Wired for communication.</h2>
+          <p class="about__kicker">Sobre mí</p>
+          <h2>Formado en política pública.<br/>Orientado a la comunicación.</h2>
           <p>
-            Over 12 years at the intersection of economic research and public debate.
-            I believe analysis is only as powerful as its ability to reach the people who can act on it —
-            so I write for <a href="https://elcomercio.pe" target="_blank" rel="noopener">El Comercio</a>,
-            speak in hundreds of media appearances each year, and build tools that make
-            Peru's data accessible to anyone.
+            Más de 12 años en la intersección entre la investigación económica y el debate público.
+            Creo que el análisis solo es poderoso si logra llegar a las personas que pueden actuar sobre él —
+            por eso escribo en <a href="https://elcomercio.pe" target="_blank" rel="noopener">El Comercio</a>,
+            aparezco en cientos de medios al año y construyo herramientas que hacen accesibles los datos del Perú.
           </p>
           <p>
-            Master in Public Policy from the University of Chicago's Harris School (graduated with honors,
-            double certification in Data Analytics and Policy Analysis).
-            BS in Economics from Universidad del Pacífico.
-            Former consultant at ECLAC / CEPAL (United Nations).
+            Máster en Políticas Públicas de la Harris School de la Universidad de Chicago (con honores,
+            doble certificación en Análisis de Datos y Análisis de Políticas Públicas).
+            Licenciado en Economía por la Universidad del Pacífico.
+            Ex consultor de la CEPAL (Naciones Unidas).
           </p>
         </div>
         <div>
-          <p class="about__kicker">Experience</p>
+          <p class="about__kicker">Trayectoria</p>
           <div class="timeline">
             <div class="timeline-item">
-              <span class="tl-year">Apr 2023 – Present</span>
+              <span class="tl-year">Abr 2023 – Presente</span>
               <div class="tl-content">
-                <strong>Public Policy Manager</strong>
-                <span>IPE — Peruvian Institute of Economics, Lima</span>
+                <strong>Gerente de Políticas Públicas</strong>
+                <span>IPE — Instituto Peruano de Economía, Lima</span>
               </div>
             </div>
             <div class="timeline-item">
               <span class="tl-year">Mar – Jul 2024</span>
               <div class="tl-content">
-                <strong>Research Consultant, Natural Resources</strong>
-                <span>ECLAC / CEPAL — United Nations, Lima</span>
+                <strong>Consultor de Investigación, Recursos Naturales</strong>
+                <span>CEPAL — Naciones Unidas, Lima</span>
               </div>
             </div>
             <div class="timeline-item">
               <span class="tl-year">Sep 2021 – Mar 2023</span>
               <div class="tl-content">
-                <strong>Chief Economist</strong>
-                <span>IPE — Peruvian Institute of Economics, Lima</span>
+                <strong>Economista Jefe</strong>
+                <span>IPE — Instituto Peruano de Economía, Lima</span>
               </div>
             </div>
             <div class="timeline-item">
               <span class="tl-year">Jun 2021</span>
               <div class="tl-content">
-                <strong>Master in Public Policy</strong>
-                <span>University of Chicago, Harris School of Public Policy · Graduated with honors · Double cert: Data Analytics &amp; Policy Analysis</span>
+                <strong>Máster en Políticas Públicas</strong>
+                <span>Universidad de Chicago, Harris School · Con honores · Doble cert: Análisis de Datos y Políticas</span>
               </div>
             </div>
             <div class="timeline-item">
-              <span class="tl-year">Jan 2014 – Jul 2019</span>
+              <span class="tl-year">Ene 2014 – Jul 2019</span>
               <div class="tl-content">
-                <strong>Economist → Senior Economist → Principal Economist</strong>
-                <span>IPE — Peruvian Institute of Economics, Lima</span>
+                <strong>Economista → Economista Senior → Economista Principal</strong>
+                <span>IPE — Instituto Peruano de Economía, Lima</span>
               </div>
             </div>
             <div class="timeline-item">
-              <span class="tl-year">Dec 2016</span>
+              <span class="tl-year">Dic 2016</span>
               <div class="tl-content">
-                <strong>BS in Economics</strong>
+                <strong>Licenciado en Economía</strong>
                 <span>Universidad del Pacífico, Lima</span>
               </div>
             </div>
