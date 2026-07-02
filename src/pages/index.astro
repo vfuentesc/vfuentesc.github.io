@@ -1,0 +1,215 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const author = "Víctor Fuentes Campos";
+const IPE = "https://ipe.org.pe/";
+// Mención dentro de la bio (con tracking del medio).
+const ECOMERCIO_PERFIL = "https://elcomercio.pe/autor/victorfuentescampos/?ref=ecr";
+// "Ver todas" y cada columna listada (no tenemos URL por artículo, así que
+// todas apuntan al perfil del autor en El Comercio).
+const ECOMERCIO_TODAS = "https://elcomercio.pe/autor/victorfuentescampos";
+
+const columnas = (await getCollection("columnas"))
+  .filter((c) => c.data.estado === "publicado")
+  .sort((a, b) => b.data.fecha.valueOf() - a.data.fecha.valueOf());
+const recientes = columnas.slice(0, 3);
+
+// Entrevistas/apariciones reales, tomadas de impact.html (rama main del repo
+// actual) y traducidas al español. Últimas 3, más recientes primero.
+const entrevistas: { titulo: string; medio: string; fecha: Date; href: string }[] = [
+  {
+    titulo: "Cajamarca: ¿el principio del fin de su industria minera?",
+    medio: "Día 1 — El Comercio",
+    fecha: new Date(2025, 8, 1),
+    href: "https://cms.imedia.pe/2025/09/15/cajamarca/79363278/6055",
+  },
+  {
+    titulo: "Perú es el octavo mayor productor de café del mundo",
+    medio: "RPP",
+    fecha: new Date(2025, 7, 1),
+    href: "https://cms.imedia.pe/2025/08/22/d-a-del-caf-peuano/79029264/3355",
+  },
+  {
+    titulo: 'La nueva ley de turismo bajo la lupa: "los incentivos fiscales no reactivan el sector"',
+    medio: "La República",
+    fecha: new Date(2025, 6, 1),
+    href: "https://cms.imedia.pe/2025/07/24/nueva-ley-del-turismo-bajo-la-lupa-los-incentivos-fiscales-no-levantan-el-sector-segun-el-ipe/78596120/6958",
+  },
+];
+
+const cap = (s = "") => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+const fmtMes = (d: Date) =>
+  new Intl.DateTimeFormat("es-PE", { month: "short", year: "numeric" }).format(d);
+const kickerDe = (tema?: string) => cap((tema?.split(",")[0] ?? "").trim());
+
+const enlaces = [
+  { label: "Email", href: "mailto:vfuentes@uchicago.edu" },
+  { label: "X", href: "https://x.com/vfuentesc" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/vfuentesc" },
+  { label: "GitHub", href: "https://github.com/vfuentesc" },
+];
+---
+
+<Base title={`${author} — Economista`}>
+  <!-- ====================== NAV ====================== -->
+  <header class="border-b border-line">
+    <nav class="mx-auto flex max-w-3xl items-center justify-between px-5 py-5 sm:px-6" aria-label="Principal">
+      <a href="/" class="font-display text-lg font-semibold tracking-tight text-ink">{author}</a>
+      <div class="flex items-center gap-5 text-sm font-medium text-ink-soft">
+        <a href="#escritos" class="transition-colors hover:text-ink cursor-pointer">Escritos</a>
+        <a href="https://peruencifras.pe" class="hidden transition-colors hover:text-ink sm:inline cursor-pointer">Perú en Cifras</a>
+        <a href="#contacto" class="transition-colors hover:text-ink cursor-pointer">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-5 sm:px-6">
+    <!-- ====================== HERO ====================== -->
+    <section class="py-20 sm:py-28">
+      <div class="flex flex-col-reverse items-start gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
+        <div class="flex-1">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+            Inteligencia artificial <span class="mx-0.5 text-sm font-normal normal-case tracking-normal align-[-1px]">∩</span> Políticas públicas
+          </p>
+          <h1 class="mt-6 font-display text-[2.1rem] font-medium leading-[1.12] tracking-[-0.01em] text-ink text-balance sm:text-5xl">
+            Conversemos sobre economía y políticas públicas.
+          </h1>
+          <div class="mt-8 max-w-xl space-y-4 text-lg leading-relaxed text-ink-soft text-pretty">
+            <p>
+              Soy {author}, economista. Dirijo el departamento de Estudios
+              Económicos y Políticas Públicas del
+              <a href={IPE} target="_blank" rel="noopener" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">IPE</a>
+              y soy columnista en
+              <a href={ECOMERCIO_PERFIL} target="_blank" rel="noopener" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">El Comercio</a>.
+            </p>
+            <p>
+              Acá, algunas de mis entrevistas y columnas. En
+              <a href="https://peruencifras.pe" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">Perú en Cifras</a>,
+              los gráficos cuentan historias.
+            </p>
+          </div>
+        </div>
+        <img
+          src="/victor-fuentes.png"
+          alt={author}
+          width="480"
+          height="480"
+          loading="eager"
+          class="h-28 w-28 shrink-0 rounded-2xl object-cover ring-1 ring-line-strong sm:h-36 sm:w-36"
+        />
+      </div>
+    </section>
+
+    <!-- ====================== ESCRITOS ====================== -->
+    <section id="escritos" class="border-t border-line py-16 sm:py-20">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Escritos</h2>
+        <a href={ECOMERCIO_TODAS} target="_blank" rel="noopener" class="text-sm font-medium text-navy transition-colors hover:text-gold cursor-pointer">Ver todas en El Comercio →</a>
+      </div>
+      <ul class="mt-8">
+        {
+          recientes.map((c) => (
+            <li class="border-b border-line first:border-t">
+              <a href={ECOMERCIO_TODAS} target="_blank" rel="noopener" class="group block py-6 transition-colors hover:bg-paper-2/60 cursor-pointer">
+                <div class="flex items-baseline justify-between gap-4">
+                  <span class="text-xs font-semibold uppercase tracking-[0.14em] text-gold">{kickerDe(c.data.tema)}</span>
+                  <span class="shrink-0 text-xs font-medium text-ink-faint">{fmtMes(c.data.fecha)}</span>
+                </div>
+                <h3 class="mt-2 font-display text-xl font-medium leading-snug text-ink text-balance transition-colors group-hover:text-navy">
+                  {c.data.titulo}
+                </h3>
+                {c.data.subtema && <p class="mt-2 text-ink-soft text-pretty">{cap(c.data.subtema)}</p>}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <!-- ====================== ENTREVISTAS ====================== -->
+    {entrevistas.length > 0 && (
+      <section id="entrevistas" class="border-t border-line py-16 sm:py-20">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Entrevistas</h2>
+        <ul class="mt-8">
+          {entrevistas.map((e) => (
+            <li class="border-b border-line first:border-t">
+              <a href={e.href} target="_blank" rel="noopener" class="group block py-6 transition-colors hover:bg-paper-2/60 cursor-pointer">
+                <div class="flex items-baseline justify-between gap-4">
+                  <span class="text-xs font-semibold uppercase tracking-[0.14em] text-gold">{e.medio}</span>
+                  <span class="shrink-0 text-xs font-medium text-ink-faint">{fmtMes(e.fecha)}</span>
+                </div>
+                <h3 class="mt-2 font-display text-xl font-medium leading-snug text-ink text-balance transition-colors group-hover:text-navy">
+                  {e.titulo}
+                </h3>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- ====================== PERÚ EN CIFRAS ====================== -->
+    <section class="border-t border-line py-16 sm:py-20">
+      <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <div class="max-w-md">
+          <div class="flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-[1px] bg-[#1f4e8c]" aria-hidden="true"></span>
+            <p class="font-display text-xl font-semibold text-ink">Perú en Cifras</p>
+          </div>
+          <p class="mt-2 text-ink-soft text-pretty">
+            Discutamos sobre evidencia: dato mata relato. Los datos del Perú, contados
+            con gráficos.
+          </p>
+        </div>
+        <a href="https://peruencifras.pe" class="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-line-strong px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-navy hover:text-navy sm:self-auto cursor-pointer">
+          Ver los gráficos
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====================== SOBRE MÍ ====================== -->
+    <section id="sobre" class="border-t border-line py-16 sm:py-20">
+      <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Sobre mí</h2>
+      <div class="mt-8 max-w-xl space-y-4 text-lg leading-relaxed text-ink-soft text-pretty">
+        <p>
+          Llevo más de una década entre la investigación económica y el debate
+          público. Trabajo para que las decisiones de política económica se discutan
+          con evidencia.
+        </p>
+        <p>
+          Soy Gerente de Políticas Públicas en el IPE y columnista en El Comercio.
+          Tengo un Máster en Políticas Públicas por la Harris School de la Universidad
+          de Chicago y soy economista por la Universidad del Pacífico.
+        </p>
+        <p>
+          Utilizo la inteligencia artificial para ampliar la frontera de lo que puedo
+          analizar, y así contribuir más a la discusión pública con evidencia.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================== CONTACTO ====================== -->
+    <section id="contacto" class="border-t border-line py-16 sm:py-24">
+      <h2 class="font-display text-2xl font-medium tracking-[-0.01em] text-ink sm:text-3xl">¿Conversamos?</h2>
+      <p class="mt-3 max-w-md text-ink-soft text-pretty">Colaboraciones, columnas, prensa o conferencias.</p>
+      <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+        {
+          enlaces.map((e) => (
+            <a href={e.href} target={e.href.startsWith("http") ? "_blank" : undefined} rel="noopener" class="text-base font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">
+              {e.label}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-3xl flex-col gap-1 px-5 py-8 sm:px-6">
+      <p class="font-display text-base font-semibold text-ink">{author}</p>
+      <p class="text-sm text-ink-faint">© 2026 · Análisis basado en evidencia.</p>
+    </div>
+  </footer>
+</Base>
