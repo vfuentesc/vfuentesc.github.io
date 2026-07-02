@@ -9,6 +9,7 @@ palabras: 478
 tono: "crítico"
 analogia_principal: ""
 estado: "publicado"
+url: "https://elcomercio.pe/economia/opinion/la-mineria-que-el-congreso-quiere-asfixiar-noticia/"
 ---
 
 En el Perú, desarrollar un proyecto minero es una prueba de resistencia de largo aliento. Según el IPE, pueden pasar 40 años desde la exploración hasta la producción de una mina. ¿Qué tanto puede pasar en ese tiempo? Al ritmo actual, podrían pasar 40 presidentes y, con ellos, un sinfín de cambios de reglas.

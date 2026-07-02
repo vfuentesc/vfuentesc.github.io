@@ -6,8 +6,8 @@ const author = "Víctor Fuentes Campos";
 const IPE = "https://ipe.org.pe/";
 // Mención dentro de la bio (con tracking del medio).
 const ECOMERCIO_PERFIL = "https://elcomercio.pe/autor/victorfuentescampos/?ref=ecr";
-// "Ver todas" y cada columna listada (no tenemos URL por artículo, así que
-// todas apuntan al perfil del autor en El Comercio).
+// "Ver todas" apunta al perfil del autor. Cada columna enlaza a su propia
+// URL (c.data.url); si una columna todavía no la tiene, cae de vuelta aquí.
 const ECOMERCIO_TODAS = "https://elcomercio.pe/autor/victorfuentescampos";
 
 const columnas = (await getCollection("columnas"))
@@ -57,7 +57,7 @@ const enlaces = [
     <nav class="mx-auto flex max-w-3xl items-center justify-between px-5 py-5 sm:px-6" aria-label="Principal">
       <a href="/" class="font-display text-lg font-semibold tracking-tight text-ink">{author}</a>
       <div class="flex items-center gap-5 text-sm font-medium text-ink-soft">
-        <a href="#escritos" class="transition-colors hover:text-ink cursor-pointer">Escritos</a>
+        <a href="#publicaciones" class="transition-colors hover:text-ink cursor-pointer">Publicaciones</a>
         <a href="https://peruencifras.pe" class="hidden transition-colors hover:text-ink sm:inline cursor-pointer">Perú en Cifras</a>
         <a href="#contacto" class="transition-colors hover:text-ink cursor-pointer">Contacto</a>
       </div>
@@ -67,7 +67,7 @@ const enlaces = [
   <main class="mx-auto max-w-3xl px-5 sm:px-6">
     <!-- ====================== HERO ====================== -->
     <section class="py-20 sm:py-28">
-      <div class="flex flex-col-reverse items-start gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
+      <div class="flex flex-col items-start gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
         <div class="flex-1">
           <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
             Inteligencia artificial <span class="mx-0.5 text-sm font-normal normal-case tracking-normal align-[-1px]">∩</span> Políticas públicas
@@ -101,8 +101,8 @@ const enlaces = [
       </div>
     </section>
 
-    <!-- ====================== ESCRITOS ====================== -->
-    <section id="escritos" class="border-t border-line py-16 sm:py-20">
+    <!-- ====================== PUBLICACIONES (Escritos + Entrevistas) ====================== -->
+    <section id="publicaciones" class="border-t border-line py-16 sm:py-20">
       <div class="flex items-baseline justify-between">
         <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Escritos</h2>
         <a href={ECOMERCIO_TODAS} target="_blank" rel="noopener" class="text-sm font-medium text-navy transition-colors hover:text-gold cursor-pointer">Ver todas en El Comercio →</a>
@@ -111,7 +111,7 @@ const enlaces = [
         {
           recientes.map((c) => (
             <li class="border-b border-line first:border-t">
-              <a href={ECOMERCIO_TODAS} target="_blank" rel="noopener" class="group block py-6 transition-colors hover:bg-paper-2/60 cursor-pointer">
+              <a href={c.data.url ?? ECOMERCIO_TODAS} target="_blank" rel="noopener" class="group block py-6 transition-colors hover:bg-paper-2/60 cursor-pointer">
                 <div class="flex items-baseline justify-between gap-4">
                   <span class="text-xs font-semibold uppercase tracking-[0.14em] text-gold">{kickerDe(c.data.tema)}</span>
                   <span class="shrink-0 text-xs font-medium text-ink-faint">{fmtMes(c.data.fecha)}</span>
@@ -125,29 +125,28 @@ const enlaces = [
           ))
         }
       </ul>
-    </section>
 
-    <!-- ====================== ENTREVISTAS ====================== -->
-    {entrevistas.length > 0 && (
-      <section id="entrevistas" class="border-t border-line py-16 sm:py-20">
-        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Entrevistas</h2>
-        <ul class="mt-8">
-          {entrevistas.map((e) => (
-            <li class="border-b border-line first:border-t">
-              <a href={e.href} target="_blank" rel="noopener" class="group block py-6 transition-colors hover:bg-paper-2/60 cursor-pointer">
-                <div class="flex items-baseline justify-between gap-4">
-                  <span class="text-xs font-semibold uppercase tracking-[0.14em] text-gold">{e.medio}</span>
-                  <span class="shrink-0 text-xs font-medium text-ink-faint">{fmtMes(e.fecha)}</span>
-                </div>
-                <h3 class="mt-2 font-display text-xl font-medium leading-snug text-ink text-balance transition-colors group-hover:text-navy">
-                  {e.titulo}
-                </h3>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
+      {entrevistas.length > 0 && (
+        <>
+          <h2 class="mt-12 text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Entrevistas</h2>
+          <ul class="mt-8">
+            {entrevistas.map((e) => (
+              <li class="border-b border-line first:border-t">
+                <a href={e.href} target="_blank" rel="noopener" class="group block py-6 transition-colors hover:bg-paper-2/60 cursor-pointer">
+                  <div class="flex items-baseline justify-between gap-4">
+                    <span class="text-xs font-semibold uppercase tracking-[0.14em] text-gold">{e.medio}</span>
+                    <span class="shrink-0 text-xs font-medium text-ink-faint">{fmtMes(e.fecha)}</span>
+                  </div>
+                  <h3 class="mt-2 font-display text-xl font-medium leading-snug text-ink text-balance transition-colors group-hover:text-navy">
+                    {e.titulo}
+                  </h3>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </section>
 
     <!-- ====================== PERÚ EN CIFRAS ====================== -->
     <section class="border-t border-line py-16 sm:py-20">

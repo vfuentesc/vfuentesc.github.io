@@ -15,6 +15,10 @@ const columnas = defineCollection({
     tono: z.string().optional(),
     analogia_principal: z.string().optional(),
     estado: z.string().default("publicado"),
+    // URL real de la columna publicada (El Comercio, Gestión, etc.). Al añadir
+    // una columna nueva, incluir este campo para que enlace directo al
+    // artículo; si falta, el sitio cae de vuelta al perfil del autor.
+    url: z.string().url().optional(),
   }),
 });
 

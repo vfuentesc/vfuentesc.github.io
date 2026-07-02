@@ -9,6 +9,7 @@ palabras: 473
 tono: "crítico"
 analogia_principal: "El Petroperú de la salud"
 estado: "publicado"
+url: "https://elcomercio.pe/economia/opinion/el-petro-peru-de-la-salud-por-victor-fuentes-opinion-ipe-noticia/"
 ---
 
 Durante años venimos discutiendo qué hacer con Petroperú. Que si lo liquidamos, un nuevo rescate o una reestructuración. Sin embargo, existe otra institución pública que comparte muchos de sus problemas, pero cuyos costos son mucho más visibles y que afectan diariamente a millones de peruanos. Se llama EsSalud.

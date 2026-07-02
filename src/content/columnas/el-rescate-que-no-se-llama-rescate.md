@@ -9,6 +9,7 @@ palabras: 495
 tono: "crítico"
 analogia_principal: "rescate = cambio de nombre"
 estado: "publicado"
+url: "https://elcomercio.pe/economia/opinion/el-rescate-que-no-se-llama-rescate-por-victor-fuentes-campos-opinion-ipe-noticia/"
 ---
 
 El Gobierno nos pide, una vez más, que no usemos palabras feas. Que no hablemos de rescate o salvataje estatal. Que entendamos que esta vez es distinto: no se trata de plata del Tesoro, sino de un sofisticado mecanismo financiero con banca internacional, fideicomisos, ProInversión y compromisos contingentes. En suma, nos piden admirar la ingeniería del tubo mientras evitan discutir el agua que corre por dentro.
