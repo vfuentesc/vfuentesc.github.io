@@ -9,6 +9,7 @@ const ECOMERCIO_PERFIL = "https://elcomercio.pe/autor/victorfuentescampos/?ref=e
 // "Ver todas" apunta al perfil del autor. Cada columna enlaza a su propia
 // URL (c.data.url); si una columna todavía no la tiene, cae de vuelta aquí.
 const ECOMERCIO_TODAS = "https://elcomercio.pe/autor/victorfuentescampos";
+const LAREPUBLICA = "https://larepublica.pe/opinion";
 
 const columnas = (await getCollection("columnas"))
   .filter((c) => c.data.estado === "publicado")
@@ -18,6 +19,12 @@ const recientes = columnas.slice(0, 3);
 // Entrevistas/apariciones reales, tomadas de impact.html (rama main del repo
 // actual) y traducidas al español. Últimas 3, más recientes primero.
 const entrevistas: { titulo: string; medio: string; fecha: Date; href: string }[] = [
+  {
+    titulo: "Si la MML fuera una empresa privada, el gerente de finanzas estaría despedido",
+    medio: "Correo",
+    fecha: new Date(2026, 9, 1),
+    href: "https://diariocorreo.pe/politica/victor-fuentes-gerente-central-de-economia-del-ipe-si-la-mml-fuera-una-empresa-privada-el-gerente-de-finanzas-estaria-despedido-noticia/",
+  },
   {
     titulo: "Cajamarca: ¿el principio del fin de su industria minera?",
     medio: "Día 1 — El Comercio",
@@ -29,12 +36,6 @@ const entrevistas: { titulo: string; medio: string; fecha: Date; href: string }[
     medio: "RPP",
     fecha: new Date(2025, 7, 1),
     href: "https://cms.imedia.pe/2025/08/22/d-a-del-caf-peuano/79029264/3355",
-  },
-  {
-    titulo: 'La nueva ley de turismo bajo la lupa: "los incentivos fiscales no reactivan el sector"',
-    medio: "La República",
-    fecha: new Date(2025, 6, 1),
-    href: "https://cms.imedia.pe/2025/07/24/nueva-ley-del-turismo-bajo-la-lupa-los-incentivos-fiscales-no-levantan-el-sector-segun-el-ipe/78596120/6958",
   },
 ];
 
@@ -77,11 +78,13 @@ const enlaces = [
           </h1>
           <div class="mt-8 max-w-xl space-y-4 text-lg leading-relaxed text-ink-soft text-pretty">
             <p>
-              Soy {author}, economista. Dirijo el departamento de Estudios
-              Económicos y Políticas Públicas del
+              Soy {author}, economista. Desde septiembre de 2026 soy Gerente
+              Central de Economía del
               <a href={IPE} target="_blank" rel="noopener" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">IPE</a>
               y soy columnista en
-              <a href={ECOMERCIO_PERFIL} target="_blank" rel="noopener" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">El Comercio</a>.
+              <a href={ECOMERCIO_PERFIL} target="_blank" rel="noopener" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">El Comercio</a>
+              y
+              <a href={LAREPUBLICA} target="_blank" rel="noopener" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">La República</a>.
             </p>
             <p>
               Acá, algunas de mis entrevistas y columnas. En
@@ -173,12 +176,12 @@ const enlaces = [
       <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Sobre mí</h2>
       <div class="mt-8 max-w-xl space-y-4 text-lg leading-relaxed text-ink-soft text-pretty">
         <p>
-          Llevo más de una década entre la investigación económica y el debate
+          Llevo casi 15 años entre la investigación económica y el debate
           público. Trabajo para que las decisiones de política económica se discutan
           con evidencia.
         </p>
         <p>
-          Soy Gerente de Políticas Públicas en el IPE y columnista en El Comercio.
+          Soy Gerente Central de Economía del IPE desde septiembre de 2026 y columnista en El Comercio y La República.
           Tengo un Máster en Políticas Públicas por la Harris School de la Universidad
           de Chicago y soy economista por la Universidad del Pacífico.
         </p>
