@@ -78,10 +78,9 @@ const enlaces = [
           </h1>
           <div class="mt-8 max-w-xl space-y-4 text-lg leading-relaxed text-ink-soft text-pretty">
             <p>
-              Soy {author}, economista. Desde septiembre de 2026 soy Gerente
-              Central de Economía del
+              Soy {author}, economista. Gerente Central de Economía del
               <a href={IPE} target="_blank" rel="noopener" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">IPE</a>
-              y soy columnista en
+              y columnista en
               <a href={ECOMERCIO_PERFIL} target="_blank" rel="noopener" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">El Comercio</a>
               y
               <a href={LAREPUBLICA} target="_blank" rel="noopener" class="font-medium text-navy underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-navy cursor-pointer">La República</a>.
@@ -108,7 +107,11 @@ const enlaces = [
     <section id="publicaciones" class="border-t border-line py-16 sm:py-20">
       <div class="flex items-baseline justify-between">
         <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Escritos</h2>
-        <a href={ECOMERCIO_TODAS} target="_blank" rel="noopener" class="text-sm font-medium text-navy transition-colors hover:text-gold cursor-pointer">Ver todas en El Comercio →</a>
+        <div class="flex gap-5">
+          <a href={ECOMERCIO_TODAS} target="_blank" rel="noopener" class="text-sm font-medium text-navy transition-colors hover:text-gold cursor-pointer">Ver todas en El Comercio →</a>
+          <!-- TODO: enlazar al perfil de autor en La República cuando exista -->
+          <span class="text-sm font-medium text-navy">Ver todas en La República →</span>
+        </div>
       </div>
       <ul class="mt-8">
         {
@@ -181,7 +184,7 @@ const enlaces = [
           con evidencia.
         </p>
         <p>
-          Soy Gerente Central de Economía del IPE desde septiembre de 2026 y columnista en El Comercio y La República.
+          Soy Gerente Central de Economía del IPE y columnista en El Comercio y La República.
           Tengo un Máster en Políticas Públicas por la Harris School de la Universidad
           de Chicago y soy economista por la Universidad del Pacífico.
         </p>
