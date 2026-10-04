@@ -22,26 +22,27 @@ const entrevistas: { titulo: string; medio: string; fecha: Date; href: string }[
   {
     titulo: "Si la MML fuera una empresa privada, el gerente de finanzas estaría despedido",
     medio: "Correo",
-    fecha: new Date(2026, 9, 1),
+    fecha: new Date(Date.UTC(2026, 9, 1)),
     href: "https://diariocorreo.pe/politica/victor-fuentes-gerente-central-de-economia-del-ipe-si-la-mml-fuera-una-empresa-privada-el-gerente-de-finanzas-estaria-despedido-noticia/",
   },
   {
     titulo: "Cajamarca: ¿el principio del fin de su industria minera?",
     medio: "Día 1 — El Comercio",
-    fecha: new Date(2025, 8, 1),
+    fecha: new Date(Date.UTC(2025, 8, 1)),
     href: "https://cms.imedia.pe/2025/09/15/cajamarca/79363278/6055",
   },
   {
     titulo: "Perú es el octavo mayor productor de café del mundo",
     medio: "RPP",
-    fecha: new Date(2025, 7, 1),
+    fecha: new Date(Date.UTC(2025, 7, 1)),
     href: "https://cms.imedia.pe/2025/08/22/d-a-del-caf-peuano/79029264/3355",
   },
 ];
 
 const cap = (s = "") => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 const fmtMes = (d: Date) =>
-  new Intl.DateTimeFormat("es-PE", { month: "short", year: "numeric" }).format(d);
+  new Intl.DateTimeFormat("es-PE", { month: "short", year: "numeric", timeZone: "UTC" }).format(d);
+const medioDe = (m = "") => (m.startsWith("El Comercio") ? "El Comercio" : m);
 const kickerDe = (tema?: string) => cap((tema?.split(",")[0] ?? "").trim());
 
 const enlaces = [
@@ -105,14 +106,7 @@ const enlaces = [
 
     <!-- ====================== PUBLICACIONES (Escritos + Entrevistas) ====================== -->
     <section id="publicaciones" class="border-t border-line py-16 sm:py-20">
-      <div class="flex items-baseline justify-between">
-        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Escritos</h2>
-        <div class="flex gap-5">
-          <a href={ECOMERCIO_TODAS} target="_blank" rel="noopener" class="text-sm font-medium text-navy transition-colors hover:text-gold cursor-pointer">Ver todas en El Comercio →</a>
-          <!-- TODO: enlazar al perfil de autor en La República cuando exista -->
-          <span class="text-sm font-medium text-navy">Ver todas en La República →</span>
-        </div>
-      </div>
+      <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-faint">Escritos</h2>
       <ul class="mt-8">
         {
           recientes.map((c) => (
@@ -120,7 +114,7 @@ const enlaces = [
               <a href={c.data.url ?? ECOMERCIO_TODAS} target="_blank" rel="noopener" class="group block py-6 transition-colors hover:bg-paper-2/60 cursor-pointer">
                 <div class="flex items-baseline justify-between gap-4">
                   <span class="text-xs font-semibold uppercase tracking-[0.14em] text-gold">{kickerDe(c.data.tema)}</span>
-                  <span class="shrink-0 text-xs font-medium text-ink-faint">{fmtMes(c.data.fecha)}</span>
+                  <span class="shrink-0 text-xs font-medium text-ink-faint">{medioDe(c.data.medio)} · {fmtMes(c.data.fecha)}</span>
                 </div>
                 <h3 class="mt-2 font-display text-xl font-medium leading-snug text-ink text-balance transition-colors group-hover:text-navy">
                   {c.data.titulo}
@@ -131,6 +125,11 @@ const enlaces = [
           ))
         }
       </ul>
+      <p class="mt-5 flex flex-col gap-1.5 text-sm font-medium">
+        <a href={ECOMERCIO_TODAS} target="_blank" rel="noopener" class="text-navy transition-colors hover:text-gold cursor-pointer">Ver todas en El Comercio →</a>
+        <!-- TODO: enlazar al perfil de autor en La República cuando exista -->
+        <span class="text-navy">Ver todas en La República →</span>
+      </p>
 
       {entrevistas.length > 0 && (
         <>
