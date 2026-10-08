@@ -1,0 +1,40 @@
+---
+import { perfil, SITE } from "../lib/perfil";
+
+const graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": perfil.id,
+      name: perfil.nombre,
+      url: `${SITE}/`,
+      image: perfil.imagen,
+      jobTitle: perfil.cargo,
+      description: "Economista. Escribe sobre economía y políticas públicas del Perú.",
+      worksFor: { "@type": "Organization", name: perfil.empleador.nombre, url: perfil.empleador.url },
+      alumniOf: perfil.estudios.map((e) => ({ "@type": "CollegeOrUniversity", name: e.nombre, url: e.url })),
+      knowsAbout: perfil.temas,
+      sameAs: perfil.sameAs,
+    },
+    {
+      "@type": "Organization",
+      "@id": `${perfil.proyecto.url}/#organizacion`,
+      name: perfil.proyecto.nombre,
+      url: perfil.proyecto.url,
+      founder: { "@id": perfil.id },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE}/#sitio`,
+      url: `${SITE}/`,
+      name: perfil.nombre,
+      inLanguage: "es",
+      author: { "@id": perfil.id },
+      about: { "@id": perfil.id },
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(graph)} />

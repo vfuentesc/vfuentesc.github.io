@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import PersonSchema from "../components/PersonSchema.astro";
+import { perfil } from "../lib/perfil";
 
 interface Props {
   title?: string;
@@ -11,6 +13,9 @@ const {
   description =
     "Traduzco cifras económicas, políticas y sociales en argumentos que mueven la conversación pública. Columnas de análisis económico y datos sobre el Perú.",
 } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const isHome = Astro.url.pathname === "/";
 ---
 
 <!doctype html>
@@ -32,7 +37,17 @@ const {
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={perfil.nombre} />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:image" content={perfil.imagen} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@vfuentesc" />
+    {isHome && <PersonSchema />}
   </head>
   <body>
     <slot />
